@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package myservice;
+
+// Define the service
+service NumberSquarer {
+  // Unary RPC method for squaring a number
+  rpc SquareNumber(Number) returns (Number) {}
+}
+
+// Define the message types
+message Number {
+  int32 value = 1;
+}
+
